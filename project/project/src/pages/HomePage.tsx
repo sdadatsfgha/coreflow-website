@@ -94,32 +94,32 @@ function HomePage() {
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"
       >
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <AnimatedSection variant="fadeUp">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+          <AnimatedSection variant="floatUp">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight gold-gradient-text">
               AI Automation Is Becoming Operational Infrastructure.
             </h1>
           </AnimatedSection>
 
-          <AnimatedSection variant="fadeUp" delay={100}>
-            <p className="text-2xl text-[#E6E8EB] max-w-3xl mx-auto font-medium">
+          <AnimatedSection variant="scaleIn" delay={100}>
+            <p className="text-2xl text-white max-w-3xl mx-auto font-medium">
               Control It Early — Or Spend Years Catching Up.
             </p>
           </AnimatedSection>
 
-          <AnimatedSection variant="fadeUp" delay={150}>
-            <p className="text-lg text-[#9AA4B2] max-w-3xl mx-auto">
+          <AnimatedSection variant="fadeBlur" delay={200}>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               We design and deploy AI automation systems that replace fragile manual workflows with scalable operational
               infrastructure — across sales, support, and internal operations.
             </p>
           </AnimatedSection>
 
-          <AnimatedSection variant="fadeUp" delay={200}>
-            <p className="text-lg text-[#E6E8EB] max-w-3xl mx-auto">
+          <AnimatedSection variant="floatUp" delay={300}>
+            <p className="text-lg text-white max-w-3xl mx-auto">
               Your competitors are not "experimenting" anymore. They are systematizing.
             </p>
           </AnimatedSection>
 
-          <AnimatedSection variant="fadeUp" delay={250} className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+          <AnimatedSection variant="scaleIn" delay={400} className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <a href="#contact" className="btn-primary">
               Book a Demo
             </a>
@@ -130,18 +130,18 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#161B22] py-20">
+      <section className="glass-effect py-20 border-y border-[#DAA520]/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6">This Is Not About AI Hype</h2>
-            <p className="text-lg text-[#9AA4B2] mb-4">
+          <AnimatedSection variant="fadeBlur" className="text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 gold-gradient-text">This Is Not About AI Hype</h2>
+            <p className="text-lg text-gray-300 mb-4">
               Most businesses will not lose because they ignored AI. They will lose because they implemented it without
               structure.
             </p>
-            <p className="text-lg text-[#9AA4B2] mb-6">
+            <p className="text-lg text-gray-300 mb-6">
               AI added on top of broken workflows does not create leverage — it creates hidden operational risk.
             </p>
-            <p className="text-xl text-[#E6E8EB] font-medium">
+            <p className="text-xl text-white font-medium">
               We don't sell tools. We design systems.
             </p>
           </AnimatedSection>
@@ -151,14 +151,14 @@ function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <AnimatedSection className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">The Real Bottleneck Isn't Your Team</h2>
-          <p className="text-lg text-[#9AA4B2] mb-8 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
             When performance breaks under growth, it's rarely a people problem.
           </p>
         </AnimatedSection>
 
         <div className="max-w-3xl mx-auto mb-8">
-          <AnimatedSection className="bg-[#161B22] border border-[#232A35] p-8 rounded">
-            <p className="text-[#9AA4B2] mb-4">It's usually one of these:</p>
+          <AnimatedSection className="glass-effect border border-[#DAA520]/20 p-8 rounded">
+            <p className="text-gray-300 mb-4">It's usually one of these:</p>
             <div className="space-y-3">
               {[
                 'Leads handled inconsistently',
@@ -168,35 +168,35 @@ function HomePage() {
                 'Processes that do not survive scale',
               ].map((item, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <span className="text-[#4F7DF3] mt-1">—</span>
-                  <span className="text-[#E6E8EB]">{item}</span>
+                  <span className="text-[#DAA520] mt-1">—</span>
+                  <span className="text-white">{item}</span>
                 </div>
               ))}
             </div>
-            <p className="text-xl text-[#E6E8EB] font-medium mt-8">Growth exposes weak systems.</p>
+            <p className="text-xl text-white font-medium mt-8">Growth exposes weak systems.</p>
           </AnimatedSection>
         </div>
       </section>
 
-      <section className="bg-[#161B22] py-20">
+      <section className="glass-effect py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">What We Build</h2>
-            <p className="text-lg text-[#9AA4B2] max-w-3xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               Custom AI automation systems designed around real operational constraints — not templates.
             </p>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {solutions.map((solution, index) => (
-              <AnimatedSection key={solution.title} variant="slideUp" delay={index * 50}>
+              <AnimatedSection key={solution.title} variant="scaleIn" delay={index * 50}>
                 <FloatingCard>
                   <a
                     href={`#${solution.anchor}`}
                     className="card-glow p-6 rounded block h-full hover:shadow-2xl"
                   >
-                    <h3 className="text-xl font-semibold mb-3 text-[#E6E8EB]">{solution.title}</h3>
-                    <p className="text-[#9AA4B2] text-sm leading-relaxed">{solution.description}</p>
+                    <h3 className="text-xl font-semibold mb-3 text-white">{solution.title}</h3>
+                    <p className="text-gray-300 text-sm leading-relaxed">{solution.description}</p>
                   </a>
                 </FloatingCard>
               </AnimatedSection>
@@ -208,31 +208,31 @@ function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <AnimatedSection className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">The Mistake Most Companies Will Make</h2>
-          <p className="text-lg text-[#9AA4B2] mb-4 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 mb-4 max-w-3xl mx-auto">
             They will adopt AI tactically instead of structurally.
           </p>
         </AnimatedSection>
 
         <div className="max-w-3xl mx-auto mb-8">
-          <AnimatedSection className="bg-[#161B22] border border-[#232A35] p-8 rounded">
-            <p className="text-[#9AA4B2] mb-4">That means:</p>
+          <AnimatedSection className="glass-effect border border-[#DAA520]/20 p-8 rounded">
+            <p className="text-gray-300 mb-4">That means:</p>
             <div className="space-y-3 mb-8">
               {['One chatbot here', 'One automation there', 'No unified logic', 'No ownership', 'No scalability'].map(
                 (item, index) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <span className="text-[#4F7DF3] mt-1">—</span>
-                    <span className="text-[#E6E8EB]">{item}</span>
+                    <span className="text-[#DAA520] mt-1">—</span>
+                    <span className="text-white">{item}</span>
                   </div>
                 )
               )}
             </div>
-            <p className="text-xl text-[#E6E8EB] font-medium">Fragmented automation becomes technical debt.</p>
-            <p className="text-lg text-[#9AA4B2] mt-4">We design systems that compound — not patch.</p>
+            <p className="text-xl text-white font-medium">Fragmented automation becomes technical debt.</p>
+            <p className="text-lg text-gray-300 mt-4">We design systems that compound — not patch.</p>
           </AnimatedSection>
         </div>
       </section>
 
-      <section className="bg-[#161B22] py-20">
+      <section className="glass-effect py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold">How It Works</h2>
@@ -264,8 +264,8 @@ function HomePage() {
                   <div className="w-16 h-16 bg-[#4F7DF3] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg shadow-[#4F7DF3]/30">
                     <span className="text-2xl font-bold text-white">{step.number}</span>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-[#E6E8EB]">{step.title}</h3>
-                  <p className="text-[#9AA4B2]">{step.description}</p>
+                  <h3 className="text-xl font-semibold mb-3 text-white">{step.title}</h3>
+                  <p className="text-gray-300">{step.description}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -283,14 +283,14 @@ function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <AnimatedSection className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">Why This Works</h2>
-          <p className="text-lg text-[#9AA4B2] mb-4 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 mb-4 max-w-3xl mx-auto">
             We don't ask you to trust claims. We show functioning systems.
           </p>
-          <p className="text-lg text-[#9AA4B2] max-w-3xl mx-auto">Instead of "success stories", we provide:</p>
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">Instead of "success stories", we provide:</p>
         </AnimatedSection>
 
         <div className="max-w-3xl mx-auto mb-8">
-          <AnimatedSection className="bg-[#161B22] border border-[#232A35] p-8 rounded">
+          <AnimatedSection className="glass-effect border border-[#DAA520]/20 p-8 rounded">
             <div className="space-y-3">
               {[
                 'Live example automations',
@@ -299,8 +299,8 @@ function HomePage() {
                 'Demonstrable logic, not promises with hype',
               ].map((item, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <span className="text-[#4F7DF3] mt-1">—</span>
-                  <span className="text-[#E6E8EB]">{item}</span>
+                  <span className="text-[#DAA520] mt-1">—</span>
+                  <span className="text-white">{item}</span>
                 </div>
               ))}
             </div>
@@ -315,15 +315,15 @@ function HomePage() {
         </AnimatedSection>
       </section>
 
-      <section className="bg-[#161B22] py-20">
+      <section className="glass-effect py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">Who This Is For</h2>
-            <p className="text-lg text-[#9AA4B2] mb-8 max-w-3xl mx-auto">You'll benefit most if:</p>
+            <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">You'll benefit most if:</p>
           </AnimatedSection>
 
           <div className="max-w-3xl mx-auto">
-            <AnimatedSection className="bg-[#0E1116] border border-[#232A35] p-8 rounded">
+            <AnimatedSection className="bg-black/60 border border-[#DAA520]/20 p-8 rounded">
               <div className="space-y-3">
                 {[
                   'Your operations are growing faster than your systems',
@@ -333,8 +333,8 @@ function HomePage() {
                   'You value clarity over hype',
                 ].map((item, index) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <span className="text-[#4F7DF3] mt-1">—</span>
-                    <span className="text-[#E6E8EB]">{item}</span>
+                    <span className="text-[#DAA520] mt-1">—</span>
+                    <span className="text-white">{item}</span>
                   </div>
                 ))}
               </div>
@@ -346,11 +346,11 @@ function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <AnimatedSection className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">AI Automation Is a Strategic Decision</h2>
-          <p className="text-lg text-[#9AA4B2] mb-6 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 mb-6 max-w-3xl mx-auto">
             In the next 12–18 months, AI-driven operations will stop being a competitive edge.
           </p>
-          <p className="text-lg text-[#9AA4B2] mb-6 max-w-3xl mx-auto">They will become baseline.</p>
-          <p className="text-lg text-[#E6E8EB] mb-8 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 mb-6 max-w-3xl mx-auto">They will become baseline.</p>
+          <p className="text-lg text-white mb-8 max-w-3xl mx-auto">
             The question is whether you design your systems early — or inherit complexity later.
           </p>
           <a href="#contact" className="btn-primary inline-block">
@@ -359,7 +359,7 @@ function HomePage() {
         </AnimatedSection>
       </section>
 
-      <section className="bg-[#161B22] py-20">
+      <section className="glass-effect py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold">FAQs</h2>
@@ -368,9 +368,9 @@ function HomePage() {
           <div className="space-y-6">
             {faqs.map((faq, index) => (
               <AnimatedSection key={index} variant="fadeUp" delay={index * 50}>
-                <div className="bg-[#0E1116] border border-[#232A35] p-6 rounded">
-                  <h3 className="text-lg font-semibold mb-3 text-[#E6E8EB]">{faq.question}</h3>
-                  <p className="text-[#9AA4B2]">{faq.answer}</p>
+                <div className="bg-black/60 border border-[#DAA520]/20 p-6 rounded">
+                  <h3 className="text-lg font-semibold mb-3 text-white">{faq.question}</h3>
+                  <p className="text-gray-300">{faq.answer}</p>
                 </div>
               </AnimatedSection>
             ))}

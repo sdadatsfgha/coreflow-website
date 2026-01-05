@@ -50,7 +50,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0E1116] text-[#E6E8EB]">
+    <div className="min-h-screen bg-black text-white">
       <Navigation currentPage={currentPage} />
       <main>{renderPage()}</main>
       <Footer />

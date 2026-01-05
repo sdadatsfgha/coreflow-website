@@ -94,7 +94,7 @@ function SolutionsPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <AnimatedSection className="max-w-3xl mx-auto text-center mb-16">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">Solutions</h1>
-          <p className="text-xl text-[#9AA4B2]">
+          <p className="text-xl text-gray-300">
             Custom AI automation systems designed for your specific business workflows.
           </p>
         </AnimatedSection>
@@ -105,18 +105,18 @@ function SolutionsPage() {
               key={solution.id}
               variant={index % 2 === 0 ? 'slideRight' : 'slideLeft'}
               delay={index * 50}
-              className={`${index % 2 === 0 ? 'bg-[#161B22]' : ''} ${
+              className={`${index % 2 === 0 ? 'glass-effect' : ''} ${
                 index % 2 === 0 ? 'py-12 px-8 rounded-lg' : ''
               }`}
             >
               <div id={solution.id}>
-                <h2 className="text-3xl font-bold mb-4 text-[#E6E8EB]">{solution.title}</h2>
-                <p className="text-lg text-[#9AA4B2] mb-6">{solution.description}</p>
+                <h2 className="text-3xl font-bold mb-4 text-white">{solution.title}</h2>
+                <p className="text-lg text-gray-300 mb-6">{solution.description}</p>
                 <ul className="space-y-3">
                   {solution.points.map((point) => (
                     <li key={point} className="flex items-start space-x-3">
                       <div className="w-1.5 h-1.5 bg-[#4F7DF3] rounded-full mt-2 animate-glow"></div>
-                      <span className="text-[#E6E8EB]">{point}</span>
+                      <span className="text-white">{point}</span>
                     </li>
                   ))}
                 </ul>

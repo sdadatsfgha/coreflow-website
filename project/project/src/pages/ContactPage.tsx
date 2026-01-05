@@ -56,31 +56,31 @@ function ContactPage() {
         <div className="max-w-3xl mx-auto">
           <AnimatedSection className="text-center mb-12">
             <h1 className="text-4xl sm:text-5xl font-bold mb-6">Contact / Book Demo</h1>
-            <p className="text-xl text-[#9AA4B2]">
+            <p className="text-xl text-gray-300">
               Let's discuss how automation can apply to your operations.
             </p>
           </AnimatedSection>
 
-          <AnimatedSection className="bg-[#161B22] p-8 rounded-lg mb-8 hover:shadow-lg hover:shadow-[#4F7DF3]/10 transition-shadow duration-300">
-            <h2 className="text-2xl font-bold mb-4 text-[#E6E8EB]">What Happens Next</h2>
-            <p className="text-[#9AA4B2] leading-relaxed">
+          <AnimatedSection className="glass-effect p-8 rounded-lg mb-8 hover:shadow-lg hover:shadow-[#DAA520]/10 transition-shadow duration-300">
+            <h2 className="text-2xl font-bold mb-4 text-white">What Happens Next</h2>
+            <p className="text-gray-300 leading-relaxed">
               We review your workflows, discuss automation potential, and determine whether automation makes sense for
               your operations. There is no obligation.
             </p>
           </AnimatedSection>
 
           {isSubmitted ? (
-            <AnimatedSection className="bg-[#161B22] border border-[#2BD4A4] p-8 rounded-lg animate-fadeInScale">
+            <AnimatedSection className="glass-effect border border-[#2BD4A4] p-8 rounded-lg animate-fadeInScale">
               <div className="flex items-center space-x-3 mb-4">
                 <CheckCircle2 className="text-[#2BD4A4] animate-glow" size={32} />
-                <h3 className="text-2xl font-bold text-[#E6E8EB]">Request Received</h3>
+                <h3 className="text-2xl font-bold text-white">Request Received</h3>
               </div>
-              <p className="text-[#9AA4B2]">We will review your request and personally contact you via email.</p>
+              <p className="text-gray-300">We will review your request and personally contact you via email.</p>
             </AnimatedSection>
           ) : (
-            <form onSubmit={handleSubmit} className="bg-[#161B22] p-8 rounded-lg space-y-6 animate-slideUp">
+            <form onSubmit={handleSubmit} className="glass-effect p-8 rounded-lg space-y-6 animate-slideUp">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-[#E6E8EB] mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
                   Name
                 </label>
                 <input
@@ -90,12 +90,12 @@ function ContactPage() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 bg-[#0E1116] border border-[#232A35] rounded text-[#E6E8EB] focus:outline-none focus:border-[#4F7DF3] transition-colors"
+                  className="w-full px-4 py-2 bg-black/60 border border-[#DAA520]/20 rounded text-white focus:outline-none focus:border-[#DAA520] transition-colors"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-[#E6E8EB] mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                   Email
                 </label>
                 <input
@@ -105,12 +105,12 @@ function ContactPage() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 bg-[#0E1116] border border-[#232A35] rounded text-[#E6E8EB] focus:outline-none focus:border-[#4F7DF3] transition-colors"
+                  className="w-full px-4 py-2 bg-black/60 border border-[#DAA520]/20 rounded text-white focus:outline-none focus:border-[#DAA520] transition-colors"
                 />
               </div>
 
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-[#E6E8EB] mb-2">
+                <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
                   Company
                 </label>
                 <input
@@ -120,12 +120,12 @@ function ContactPage() {
                   value={formData.company}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 bg-[#0E1116] border border-[#232A35] rounded text-[#E6E8EB] focus:outline-none focus:border-[#4F7DF3] transition-colors"
+                  className="w-full px-4 py-2 bg-black/60 border border-[#DAA520]/20 rounded text-white focus:outline-none focus:border-[#DAA520] transition-colors"
                 />
               </div>
 
               <div>
-                <label htmlFor="useCase" className="block text-sm font-medium text-[#E6E8EB] mb-2">
+                <label htmlFor="useCase" className="block text-sm font-medium text-white mb-2">
                   Use Case
                 </label>
                 <textarea
@@ -135,7 +135,7 @@ function ContactPage() {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-2 bg-[#0E1116] border border-[#232A35] rounded text-[#E6E8EB] focus:outline-none focus:border-[#4F7DF3] transition-colors resize-none"
+                  className="w-full px-4 py-2 bg-black/60 border border-[#DAA520]/20 rounded text-white focus:outline-none focus:border-[#DAA520] transition-colors resize-none"
                   placeholder="Describe your workflow challenges and automation goals..."
                 />
               </div>
@@ -145,7 +145,7 @@ function ContactPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full px-8 py-3 bg-[#4F7DF3] text-white font-medium rounded hover:bg-[#3D6AE0] hover:shadow-lg hover:shadow-[#4F7DF3]/20 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed active:scale-95"
+                className="w-full px-8 py-3 bg-[#4F7DF3] text-white font-medium rounded hover:bg-[#3D6AE0] hover:shadow-lg hover:shadow-[#DAA520]/20 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed active:scale-95"
               >
                 {isSubmitting ? 'Submitting...' : 'Book Demo'}
               </button>

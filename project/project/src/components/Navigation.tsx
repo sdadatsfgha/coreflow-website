@@ -18,12 +18,12 @@ function Navigation({ currentPage }: NavigationProps) {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#0E1116] backdrop-blur-md border-b-2 border-[#232A35]">
+    <nav className="sticky top-0 z-50 bg-black/80 backdrop-blur-xl border-b border-[#DAA520]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <a href="#home" className="text-xl font-bold text-[#E6E8EB] tracking-tight relative group">
-            <span className="relative z-10">COREFLOW</span>
-            <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#4F7DF3] group-hover:w-full transition-all duration-300"></span>
+          <a href="#home" className="text-xl font-bold text-white tracking-tight relative group">
+            <span className="relative z-10 gold-gradient-text">COREFLOW</span>
+            <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-[#DAA520] to-[#FFD700] group-hover:w-full transition-all duration-500"></span>
           </a>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -31,15 +31,15 @@ function Navigation({ currentPage }: NavigationProps) {
               <a
                 key={link.href}
                 href={link.href}
-                className={`text-xs font-semibold tracking-wider uppercase relative transition-colors duration-200 ${
+                className={`text-xs font-semibold tracking-wider uppercase relative transition-all duration-300 ${
                   currentPage === link.href.slice(1)
-                    ? 'text-[#4F7DF3]'
-                    : 'text-[#9AA4B2] hover:text-[#E6E8EB]'
+                    ? 'text-[#DAA520]'
+                    : 'text-gray-400 hover:text-white'
                 }`}
               >
                 {link.label}
                 {currentPage === link.href.slice(1) && (
-                  <span className="absolute -bottom-2 left-0 right-0 h-[2px] bg-[#4F7DF3]"></span>
+                  <span className="absolute -bottom-2 left-0 right-0 h-[2px] bg-gradient-to-r from-[#DAA520] to-[#FFD700] animate-border-glow"></span>
                 )}
               </a>
             ))}
@@ -50,14 +50,14 @@ function Navigation({ currentPage }: NavigationProps) {
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden text-[#E6E8EB] p-2 border border-[#232A35] hover:border-[#4F7DF3] transition-colors"
+            className="md:hidden text-white p-2 border border-[#DAA520]/30 hover:border-[#DAA520] transition-all duration-300 rounded-sm"
           >
             {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 space-y-4 border-t border-[#232A35]">
+          <div className="md:hidden py-4 space-y-4 border-t border-[#DAA520]/30">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -65,8 +65,8 @@ function Navigation({ currentPage }: NavigationProps) {
                 onClick={() => setMobileMenuOpen(false)}
                 className={`block text-xs font-semibold tracking-wider uppercase transition-colors ${
                   currentPage === link.href.slice(1)
-                    ? 'text-[#4F7DF3]'
-                    : 'text-[#9AA4B2] hover:text-[#E6E8EB]'
+                    ? 'text-[#DAA520]'
+                    : 'text-gray-400 hover:text-white'
                 }`}
               >
                 {link.label}
